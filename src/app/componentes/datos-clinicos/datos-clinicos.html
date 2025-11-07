@@ -1,0 +1,120 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <a title="Ir a inicio" style="color:inherit; text-decoration:none;">
+        <fa-icon [icon]="faHouse" id="casa" (click)="goToDestino()" hover="cursor:pointer;"></fa-icon>
+      </a>
+    </div>
+    <div class="col-md-10">
+      <h1 class="display-4" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        Datos Clínicos
+      </h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Fila 1 -->
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="idPaciente">ID Paciente</label>
+          <input type="text" class="form-control" id="idPaciente" placeholder="Ingrese el ID del paciente">
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="numCita">No. de Cita</label>
+          <input type="text" class="form-control" id="numCita" placeholder="Ingrese el número de cita">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Fila 2 -->
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="glucosa">Glucosa (mg/dL)</label>
+          <input type="number" class="form-control" id="glucosa" placeholder="Ej. 90">
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="talla">Talla (m)</label>
+          <input type="number" step="0.01" class="form-control" id="talla" placeholder="Ej. 1.70">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Fila 3 -->
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="peso">Peso (kg)</label>
+          <input type="number" step="0.01" class="form-control" id="peso" placeholder="Ej. 68.5">
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="imc">IMC</label>
+          <input type="number" step="0.01" class="form-control" id="imc" placeholder="Ej. 23.7">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Fila 4 -->
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="observaciones">Observaciones</label>
+          <textarea class="form-control" id="observaciones" rows="3" placeholder="Ingrese observaciones médicas"></textarea>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="fechaRegistro">Fecha de Registro</label>
+          <input type="date" class="form-control" id="fechaRegistro">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Botones -->
+  <div class="row">
+    <div class="col-md-2">
+      <button type="button" class="btn btn-primary">Guardar</button>
+    </div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-primary">Actualizar</button>
+    </div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-primary">Consulta General</button>
+    </div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-primary">Consultar</button>
+    </div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-primary">Limpiar</button>
+    </div>
+    <div class="col-md-2">
+      <button type="button" id="btneliminar" class="btn btn-primary">
+        <fa-icon [icon]="faTrash"></fa-icon> Eliminar
+      </button>
+    </div>
+  </div>
+</div>

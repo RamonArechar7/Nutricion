@@ -1,0 +1,77 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <a title="Ir a inicio" style="color:inherit; text-decoration:none;">
+        <fa-icon [icon]="faHouse" id="casa" (click)="goToDestino()" hover="cursor:pointer;"></fa-icon>
+      </a>
+    </div>
+    <div class="col-md-10">
+      <h1 class="display-4" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        Gestión de Usuarios
+      </h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Campos de Usuario y Contraseña -->
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="usuario">Usuario</label>
+          <input type="text" class="form-control" id="usuario" placeholder="Ingrese el nombre de usuario">
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="contrasena">Contraseña</label>
+          <input type="password" class="form-control" id="contrasena" placeholder="Ingrese la contraseña">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Tabla de usuarios -->
+  <div class="row mt-4">
+    <div class="col-12">
+      <div class="tabla-contenedor">
+        <table class="tabla-usuarios">
+          <thead>
+            <tr>
+              <th>Title 1</th>
+              <th>Title 2</th>
+              <th>Title 3</th>
+              <th>Title 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ejemplo 1</td>
+              <td>Ejemplo 2</td>
+              <td>Ejemplo 3</td>
+              <td>Ejemplo 4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botones -->
+  <div class="row mt-4 botones">
+    <div class="col-md-4">
+      <button type="button" class="btn btn-primary">Actualizar usuario</button>
+    </div>
+    <div class="col-md-4">
+      <button type="button" class="btn btn-primary">Limpiar</button>
+    </div>
+    <div class="col-md-4">
+      <button type="button" id="btneliminar" class="btn btn-primary">
+        <fa-icon [icon]="faTrash"></fa-icon> Eliminar Usuario
+      </button>
+    </div>
+  </div>
+</div>

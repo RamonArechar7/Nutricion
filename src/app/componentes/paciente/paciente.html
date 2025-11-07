@@ -1,0 +1,122 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <a title="Ir a inicio" style="color:inherit; text-decoration:none;">
+                <fa-icon [icon]="faHouse" id="casa" (click)="goToDestino()" hover="cursor:pointer;"></fa-icon>
+            </a>
+        </div>
+        <div class="col-md-10">
+            <h1 class="display-4" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Registrar
+                Paciente</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="idPaciente">ID Paciente</label>
+                    <input type="text" class="form-control" id="idPaciente" placeholder="Ingrese el ID del paciente">
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fechaNacimiento"
+                        placeholder="Ingrese la fecha de nacimiento del paciente">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre del paciente">
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="sexo">Sexo</label>
+                    <select class="form-control" id="sexo">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="apellidoPaterno">Apellido Paterno</label>
+                    <input type="text" class="form-control" id="apellidoPaterno"
+                        placeholder="Ingrese el apellido paterno del paciente">
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="telefono">Telefono</label>
+                    <input type="text" class="form-control" id="telefono" placeholder="Ingrese el telefono del paciente"
+                        maxlength="10" pattern="[0-9]{10}"
+                        onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="apellidoMaterno">Apellido Materno</label>
+                    <input type="text" class="form-control" id="apellidoMaterno"
+                        placeholder="Ingrese el apellido materno del paciente">
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="correoElectronico">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="correoElectronico"
+                        placeholder="Ingrese el correo electrónico del paciente">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary">Registrar</button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary">Actualizar</button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary">Consulta General</button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary">Consultar</button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary">Limpiar</button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" id="btneliminar" class="btn btn-primary">
+                <fa-icon [icon]="faTrash">
+                </fa-icon>Eliminar
+            </button>
+        </div>
+    </div>
+</div>

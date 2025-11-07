@@ -1,0 +1,34 @@
+*{
+    text-align: center;
+}
+.container{
+        margin-top: 7.5rem;
+        margin-bottom: 2.5rem;
+}
+.login-container {
+    margin-top: 5rem;
+}
+h1{
+        font-weight: bold;
+}
+.principal {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 3rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background-color: #dfdfdf;
+    box-shadow: 0 2px 5px rgba(0, 0, 1, 0.1);
+}
+.form-group {
+    margin-bottom:3.5rem;
+    font-size: 0.7cm;
+}
+.botones{
+    margin-top: 2rem;
+    font-size: 0.7cm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}

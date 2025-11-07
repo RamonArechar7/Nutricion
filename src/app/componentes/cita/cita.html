@@ -1,0 +1,86 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <a title="Ir a inicio" style="color:inherit; text-decoration:none;">
+                <fa-icon [icon]="faHouse" id="casa" (click)="goToDestino()" hover="cursor:pointer;"></fa-icon>
+            </a>
+        </div>
+        <div class="col-md-10">
+            <h1 class="display-4" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Registrar
+                Paciente</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="idPaciente">ID Paciente</label>
+                <input type="text" class="form-control" id="idPaciente" placeholder="Ingrese el ID del paciente">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="idCita">Hora de la Cita</label>
+                <input type="time" class="form-control" id="idCita" placeholder="Ingrese la hora de la cita">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="idDoctor">No. Cita</label>
+                <input type="text" class="form-control" id="idDoctor" placeholder="Ingrese el número de la cita">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="idDoctor">Estado de la Cita</label>
+                <select class="form-control" id="estadoCita">
+                    <option value="-">Seleccione una opción</option>
+                    <option value="pendiente">Pendiente</option>
+                    <option value="confirmada">Confirmada</option>
+                    <option value="cancelada">Cancelada</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="idDoctor">Motivo</label>
+                <input type="text" class="form-control" id="idDoctor" placeholder="Ingrese el motivo de la cita">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="idDoctor">Fecha de la cita</label>
+                <input type="date" class="form-control" id="fechaCita" placeholder="Ingrese la fecha de la cita">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary">Registrar</button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary">Actualizar</button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary">Consulta General</button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary">Consultar</button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary">Limpiar</button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" id="btneliminar" class="btn btn-primary">
+                <fa-icon [icon]="faTrash">
+                </fa-icon>Eliminar
+            </button>
+        </div>
+    </div>
+</div>

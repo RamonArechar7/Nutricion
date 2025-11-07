@@ -1,0 +1,103 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <a title="Ir a inicio" style="color:inherit; text-decoration:none;">
+        <fa-icon [icon]="faHouse" id="casa" (click)="goToDestino()" hover="cursor:pointer;"></fa-icon>
+      </a>
+    </div>
+    <div class="col-md-10">
+      <h1 class="display-4" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        Plan de Alimentación
+      </h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Fila 1 -->
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="idPaciente">ID Paciente</label>
+          <input type="text" class="form-control" id="idPaciente" placeholder="Ingrese el ID del paciente">
+        </div>
+      </form>
+    </div>
+
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="numCita">No. de Cita</label>
+          <input type="text" class="form-control" id="numCita" placeholder="Ingrese el número de cita">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Fila 2 -->
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="calorias">Calorías (kcal)</label>
+          <input type="number" class="form-control" id="calorias" placeholder="Ej. 1800">
+        </div>
+      </form>
+    </div>
+
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="fechaInicio">Fecha de Inicio</label>
+          <input type="date" class="form-control" id="fechaInicio">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Fila 3 -->
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="descripcion">Descripción</label>
+          <textarea class="form-control" id="descripcion" rows="3" placeholder="Ingrese la descripción del plan de alimentación"></textarea>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="fechaFin">Fecha de Fin</label>
+          <input type="date" class="form-control" id="fechaFin">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Botones -->
+  <div class="row">
+    <div class="col-md-2">
+      <button type="button" class="btn btn-primary">Registrar</button>
+    </div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-primary">Actualizar</button>
+    </div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-primary">Consulta General</button>
+    </div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-primary">Consultar</button>
+    </div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-primary">Limpiar</button>
+    </div>
+    <div class="col-md-2">
+      <button type="button" id="btneliminar" class="btn btn-primary">
+        <fa-icon [icon]="faTrash"></fa-icon> Eliminar
+      </button>
+    </div>
+  </div>
+</div>

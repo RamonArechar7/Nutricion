@@ -1,0 +1,48 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+        <fa-icon [icon]="faHouse" id="casa"></fa-icon>
+      </div>
+      <div class="col-md-11">
+        <h1 class="display-4" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Menú de Servicios
+      Nutricionales</h1>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="contenido">
+  <div class="botones">
+    <div class="registrar-paciente">
+      <fa-icon [icon]="faAddressCard"></fa-icon>
+      <button class="btn m-2 btn-lg" (click)="goToPaciente()" title="Registrar Paciente">Registrar Paciente</button>
+    </div>
+    <div class="registrar-cita">
+      <fa-icon [icon]="faCalendar"></fa-icon>
+      <button class="btn m-2 btn-lg" (click)="goToCita()" title="Registrar Cita">Registrar Cita</button>
+    </div>
+    <div class="planes-alimentacion">
+      <fa-icon [icon]="faHandHoldingMedical"></fa-icon>
+      <button class="btn m-2 btn-lg" (click)="goToPlan()" title="Planes de Alimentación">Planes de Alimentación</button>
+    </div>
+    <div class="revisar-expedientes">
+      <fa-icon [icon]="faAddressBook"></fa-icon>
+      <button class="btn m-2 btn-lg" (click)="goToExpediente()" title="Revisar Expedientes">Revisar Expedientes</button>
+    </div>
+    <div class="datos-clinicos">
+      <fa-icon [icon]="faChartSimple"></fa-icon>
+      <button class="btn m-2 btn-lg" (click)="goToDatos()" title="Ver Datos Clínicos">Ver Datos Clínicos</button>
+    </div>
+    <div class="gestionar-usuarios">
+      <fa-icon [icon]="faUsers"></fa-icon>
+       <button class="btn m-2 btn-lg" (click)="goToGestionUsuarios()" title="Gestionar Usuarios">Gestionar Usuarios</button>
+    </div>
+  </div>
+  <div>
+    <fa-icon [icon]="faSignOutAlt"></fa-icon>
+    <button class="btn m-2 btn-lg" (click)="logout()" title="Cerrar Sesión">Cerrar Sesión</button>
+  </div>
+
+</div>
