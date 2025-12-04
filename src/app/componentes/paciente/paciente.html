@@ -18,7 +18,8 @@
             <form>
                 <div class="form-group">
                     <label for="idPaciente">ID Paciente</label>
-                    <input type="text" class="form-control" id="idPaciente" placeholder="Ingrese el ID del paciente">
+                    <input type="text" class="form-control" id="idPaciente" placeholder="Ingrese el ID del paciente"
+                        [(ngModel)]="paciente.id_paciente" name="idPaciente">
                 </div>
             </form>
         </div>
@@ -27,7 +28,8 @@
                 <div class="form-group">
                     <label for="fechaNacimiento">Fecha de Nacimiento</label>
                     <input type="date" class="form-control" id="fechaNacimiento"
-                        placeholder="Ingrese la fecha de nacimiento del paciente">
+                        placeholder="Ingrese la fecha de nacimiento del paciente"
+                        [(ngModel)]="paciente.fecha_nacimiento" name="fechaNacimiento">
                 </div>
             </form>
         </div>
@@ -37,7 +39,8 @@
             <form>
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre del paciente">
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre del paciente"
+                        [(ngModel)]="paciente.nombre" name="nombre">
                 </div>
             </form>
         </div>
@@ -45,7 +48,7 @@
             <form>
                 <div class="form-group">
                     <label for="sexo">Sexo</label>
-                    <select class="form-control" id="sexo">
+                    <select class="form-control" id="sexo" [(ngModel)]="paciente.sexo" name="sexo">
                         <option value="masculino">Masculino</option>
                         <option value="femenino">Femenino</option>
                         <option value="otro">Otro</option>
@@ -60,7 +63,8 @@
                 <div class="form-group">
                     <label for="apellidoPaterno">Apellido Paterno</label>
                     <input type="text" class="form-control" id="apellidoPaterno"
-                        placeholder="Ingrese el apellido paterno del paciente">
+                        placeholder="Ingrese el apellido paterno del paciente" [(ngModel)]="paciente.apellido_paterno"
+                        name="apellidoPaterno">
                 </div>
             </form>
         </div>
@@ -71,7 +75,8 @@
                     <input type="text" class="form-control" id="telefono" placeholder="Ingrese el telefono del paciente"
                         maxlength="10" pattern="[0-9]{10}"
                         onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')" [(ngModel)]="paciente.telefono"
+                        name="telefono">
                 </div>
             </form>
         </div>
@@ -82,7 +87,8 @@
                 <div class="form-group">
                     <label for="apellidoMaterno">Apellido Materno</label>
                     <input type="text" class="form-control" id="apellidoMaterno"
-                        placeholder="Ingrese el apellido materno del paciente">
+                        placeholder="Ingrese el apellido materno del paciente" [(ngModel)]="paciente.apellido_materno"
+                        name="apellidoMaterno">
                 </div>
             </form>
         </div>
@@ -91,32 +97,69 @@
                 <div class="form-group">
                     <label for="correoElectronico">Correo Electrónico</label>
                     <input type="email" class="form-control" id="correoElectronico"
-                        placeholder="Ingrese el correo electrónico del paciente">
+                        placeholder="Ingrese el correo electrónico del paciente"
+                        [(ngModel)]="paciente.correo_electronico" name="correoElectronico">
                 </div>
             </form>
         </div>
     </div>
     <div class="row">
         <div class="col-md-2">
-            <button type="button" class="btn btn-primary">Registrar</button>
+            <button type="button" class="btn btn-primary" (click)="registrar()">Registrar</button>
         </div>
         <div class="col-md-2">
-            <button type="button" class="btn btn-primary">Actualizar</button>
+            <button type="button" class="btn btn-primary" (click)="actualizar()">Actualizar</button>
         </div>
         <div class="col-md-2">
             <button type="button" class="btn btn-primary">Consulta General</button>
         </div>
         <div class="col-md-2">
-            <button type="button" class="btn btn-primary">Consultar</button>
+            <button type="button" class="btn btn-primary" (click)="consultar()">Consultar</button>
         </div>
         <div class="col-md-2">
-            <button type="button" class="btn btn-primary">Limpiar</button>
+            <button type="button" class="btn btn-primary" (click)="limpiar()">Limpiar</button>
         </div>
         <div class="col-md-2">
-            <button type="button" id="btneliminar" class="btn btn-primary">
+            <button type="button" id="btneliminar" class="btn btn-primary" (click)="eliminar()">
                 <fa-icon [icon]="faTrash">
                 </fa-icon>Eliminar
             </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Table for General Query -->
+<div class="container mt-4" *ngIf="pacientes.length > 0">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="mb-3">Lista de Pacientes</h3>
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <th>Fecha Nacimiento</th>
+                        <th>Sexo</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of pacientes">
+                        <td>{{ p.id_paciente }}</td>
+                        <td>{{ p.nombre }}</td>
+                        <td>{{ p.apellido_paterno }}</td>
+                        <td>{{ p.apellido_materno }}</td>
+                        <td>{{ p.fecha_nacimiento | date:'dd/MM/yyyy' }}</td>
+                        <td>{{ p.sexo }}</td>
+                        <td>{{ p.telefono }}</td>
+                        <td>{{ p.correo_electronico }}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

@@ -1,0 +1,54 @@
+### Obtener todos los pacientes
+GET http://localhost:3000/api/pacientes
+
+### Obtener un paciente por ID (id_paciente)
+GET http://localhost:3000/api/pacientes/1224100661
+
+### Crear un nuevo paciente
+POST http://localhost:3000/api/pacientes
+Content-Type: application/json
+
+{
+    "id_paciente": "1224100555",
+    "nombre": "Juan",
+    "apellido_paterno": "Perez",
+    "apellido_materno": "Lopez",
+    "fecha_nacimiento": "1990-01-01",
+    "sexo": "masculino",
+    "telefono": "1234567890",
+    "correo_electronico": "juan.perez@email.com"
+}
+
+### Actualizar un paciente
+PUT http://localhost:3000/api/pacientes/1224100661
+Content-Type: application/json
+
+{
+    "nombre": "Gabriela Alexandra ",
+    "apellido_paterno": "Aguilar ",
+    "apellido_materno": "Perez",
+    "sexo": "femenino",
+    "telefono": "4681328821",
+    "correo_electronico": "1224100661.gaap@gmail.com"
+}
+
+### Eliminar un paciente
+DELETE http://localhost:3000/api/pacientes/1224100661
+
+### Registrar Usuario
+POST http://localhost:3000/api/usuarios/register
+Content-Type: application/json
+
+{
+    "usuario": "admin",
+    "contrasena": "123456"
+}
+
+### Iniciar Sesion
+POST http://localhost:3000/api/usuarios/login
+Content-Type: application/json
+
+{
+    "usuario": "admin",
+    "contrasena": "123456"
+}
